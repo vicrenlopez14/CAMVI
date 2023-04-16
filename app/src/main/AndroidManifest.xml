@@ -12,25 +12,10 @@
         android:theme="@style/Theme.Camvi"
         tools:targetApi="31">
         <activity
-            android:name=".ClientesActivity"
-            android:exported="false"
-            android:label="@string/title_activity_clientes"
-            android:theme="@style/Theme.Camvi.NoActionBar" />
-        <activity
-            android:name=".CamarografosActivity"
-            android:exported="false"
-            android:label="@string/title_activity_camarografos"
-            android:theme="@style/Theme.Camvi.NoActionBar" />
-        <activity
-            android:name=".AdministradoresActivity"
-            android:exported="false"
-            android:label="@string/title_activity_administradores"
-            android:theme="@style/Theme.Camvi.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Camvi.NoActionBar">
+            android:theme="@style/Theme.Camvi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
