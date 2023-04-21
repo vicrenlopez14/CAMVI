@@ -27,6 +27,9 @@ class MainActivity : ComponentActivity() {
                         Button(onClick = { /*TODO*/ }) {
                             Text("Hola")
                         }
+                        Button(onClick = {}) {
+                            Text("Hola Adri")
+                        }
                     }
 
                 }
