@@ -1,4 +1,4 @@
-package com.technolyst.drawer.pages.component
+package com.example.camvi.ui.widgets.administradores
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -9,71 +9,62 @@ import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navOptions
+import com.example.camvi.ui.widgets.global.DrawerScreen
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NavigationDrawerItems(navController: NavHostController, drawerState: DrawerState) {
+    val currentBackStackEntryAsState by navController.currentBackStackEntryAsState()
 
-    var scope = rememberCoroutineScope()
+    val destination = currentBackStackEntryAsState?.destination
 
-    var currentBackStackEntryAsState = navController.currentBackStackEntryAsState()
-
-    var destination = currentBackStackEntryAsState.value?.destination
-
-
-
-    NavigationDrawerItem(
-        icon = { Icon(Icons.Filled.Home, contentDescription = "Home") },
-        label = { Text(text = "Home") },
-        selected = destination?.route == "HomePage",
-        onClick = {
-            navController.navigate("HomePage", navOptions {
-                this.launchSingleTop = true
-                this.restoreState = true
-
-            })
-            scope.launch {
-                drawerState.close()
-            }
-
-        }, modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
+    val screens = listOf(
+        DrawerScreen.Inicio,
+        DrawerScreen.Camarografos,
+        DrawerScreen.Sesiones,
+        DrawerScreen.Confirmaciones,
+        DrawerScreen.Calificaciones,
+        DrawerScreen.GaleriaDeFotos,
+        DrawerScreen.CerrarSesion
     )
 
-    Spacer(modifier = Modifier.height(10.dp))
+    screens.forEach { screen ->
+        AddItem(
+            screen = screen,
+            currentDestination = destination,
+            navController = navController,
+            drawerState = drawerState
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun AddItem(
+    screen: DrawerScreen,
+    currentDestination: NavDestination?,
+    navController: NavController,
+    drawerState: DrawerState
+) {
+    val scope = rememberCoroutineScope()
+
     NavigationDrawerItem(
-        icon = { Icon(Icons.Filled.Place, "About") },
-        label = { Text(text = "About") },
-        selected = destination?.route == "AboutPage",
+        icon = { Icon(screen.icon, screen.title) },
 
+        label = { Text(text = screen.title) },
+        selected = currentDestination?.route == "SettingPage",
         onClick = {
-            navController.navigate("AboutPage", navOptions {
-                this.launchSingleTop = true
-                this.restoreState = true
-
-            })
-            scope.launch {
-                drawerState.close()
-            }
-        },
-        modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
-    )
-    Spacer(modifier = Modifier.height(10.dp))
-
-
-    NavigationDrawerItem(
-        icon = { Icon(Icons.Filled.Settings, "Setting") },
-
-        label = { Text(text = "Setting") },
-        selected = destination?.route == "SettingPage",
-        onClick = {
-            navController.navigate("SettingPage", navOptions {
+            navController.navigate(screen.route, navOptions {
                 this.launchSingleTop = true
                 this.restoreState = true
             })
@@ -83,6 +74,6 @@ fun NavigationDrawerItems(navController: NavHostController, drawerState: DrawerS
         },
         modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
     )
-
+    Spacer(modifier = Modifier.height(10.dp))
 
 }

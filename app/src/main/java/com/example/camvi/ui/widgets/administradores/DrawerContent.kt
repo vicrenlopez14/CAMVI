@@ -1,4 +1,4 @@
-package com.technolyst.drawer.pages.component
+package com.example.camvi.ui.widgets.administradores
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Divider

@@ -1,4 +1,4 @@
-package com.technolyst.drawer.pages.component
+package com.example.camvi.ui.widgets.administradores
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -17,7 +17,6 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
-import com.technolyst.drawer.R
 
 @OptIn(ExperimentalUnitApi::class)
 @Composable
@@ -28,22 +27,16 @@ fun DrawerHeader() {
             .fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        Image(
-            painter = painterResource(id = R.drawable.pic_profile),
-            contentDescription = "profile pic",
-            modifier = Modifier
-                .clip(CircleShape)
-                .width(150.dp)
-                .border(width = 2.dp, color = Color.Gray, shape = CircleShape)
-        )
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        Text(text = "Prashant Developer", fontSize = TextUnit(18F, TextUnitType.Sp), color = Color.Black,)
+        Text(
+            text = "Prashant Developer",
+            fontSize = TextUnit(18F, TextUnitType.Sp),
+            color = Color.Black,
+        )
         Spacer(modifier = Modifier.height(2.dp))
         Text(text = "xyz@gmail.com", fontSize = TextUnit(14F, TextUnitType.Sp), color = Color.Gray)
-
-
 
 
     }
