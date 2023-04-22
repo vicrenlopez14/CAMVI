@@ -36,7 +36,7 @@
 
     <EditText
         android:id="@+id/txtEmail"
-        android:layout_width="312dp"
+        android:layout_width="324dp"
         android:layout_height="62dp"
         android:ems="10"
         android:hint="Correo"
@@ -49,8 +49,8 @@
 
     <EditText
         android:id="@+id/txtPassword"
-        android:layout_width="307dp"
-        android:layout_height="58dp"
+        android:layout_width="324dp"
+        android:layout_height="62dp"
         android:ems="10"
         android:hint="Contraeña"
         android:inputType="textPassword"
