@@ -2,6 +2,7 @@
     <string name="app_name">Camvi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="indicacion1">Ingresa tu correo electrónico para recibir un codigo de verificación</string>
+    <string name="indicacion1">Ingresa tu correo electrónico para recibir un código de verificación</string>
+    <string name="indicacion2">Ingresa el código de 4 digitos enviado a tu correo</string>
 
 </resources>
