@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.clientes.Fragment_QualifySession">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="22dp"
+        android:layout_height="25dp"
+        android:src="@drawable/arrowl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_boldd"
+        android:text="Sesión fotografica para una boda"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="0.5dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Evento"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <ScrollView
+        android:layout_width="408dp"
+        android:layout_height="356dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="408dp"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/lbPuntualidad"
+                    android:layout_width="178dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="215dp"
+                    android:layout_marginBottom="23dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Puntualidad del fotógrafo"
+                    android:textColor="@color/black" />
+
+                <RatingBar
+                    android:id="@+id/rb1"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="216dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="16dp"
+                    android:numStars="5"
+                    android:rating="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="408dp"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/lbActitud"
+                    android:layout_width="178dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="215dp"
+                    android:layout_marginBottom="23dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Actitud del fotógrafo"
+                    android:textColor="@color/black" />
+
+                <RatingBar
+                    android:id="@+id/rb2"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="216dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="16dp"
+                    android:numStars="5"
+                    android:rating="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="408dp"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/lbDesempeño"
+                    android:layout_width="178dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="215dp"
+                    android:layout_marginBottom="23dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Desempeño del fotógrafo"
+                    android:textColor="@color/black" />
+
+                <RatingBar
+                    android:id="@+id/rb3"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="216dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="16dp"
+                    android:numStars="5"
+                    android:rating="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="408dp"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/lbProfesionalismo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="212dp"
+                    android:layout_marginBottom="17dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Profesionalismo del fotógrafo"
+                    android:textColor="@color/black" />
+
+                <RatingBar
+                    android:id="@+id/rb4"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="216dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="16dp"
+                    android:numStars="5"
+                    android:rating="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="408dp"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/lbPresentacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="212dp"
+                    android:layout_marginBottom="17dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Presentación personal del fotógrafo"
+                    android:textColor="@color/black" />
+
+                <RatingBar
+                    android:id="@+id/rb5"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="216dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="16dp"
+                    android:numStars="5"
+                    android:rating="0" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
