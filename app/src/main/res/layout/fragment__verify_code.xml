@@ -80,6 +80,7 @@
         android:background="@drawable/image"
         android:fontFamily="@font/inter_semibold"
         android:text="Verificar"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
