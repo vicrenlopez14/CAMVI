@@ -58,7 +58,7 @@ fun AdministradoresNavigationScreen() {
         },
     ) {
         Scaffold(topBar = {
-            TopAppBar(title = { Text(text = "Navigation Drawer") }, navigationIcon = {
+            TopAppBar(title = { Text(text = "Camvi") }, navigationIcon = {
 
                 IconButton(onClick = {
 
