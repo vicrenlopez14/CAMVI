@@ -9,13 +9,12 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material3.Button
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.wear.tiles.material.Text
-=======
-import androidx.compose.ui.Modifier
->>>>>>> origin/Adriana
+//=======
+//>>>>>>> origin/Adriana
 import com.example.camvi.ui.screens.administradores.AdministradoresNavigationScreen
 import com.example.camvi.ui.theme.CamviTheme
 import com.example.camvi.ui.theme.CustomCamviTheme
