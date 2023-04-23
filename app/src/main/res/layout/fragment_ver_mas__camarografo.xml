@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    tools:context=".controller.clientes.fragment_verMas_Camarografo">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/campana"
+            android:layout_gravity="end"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#F3DE8A"
+            app:cardCornerRadius="30dp"
+            app:cardUseCompatPadding="true"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ImagenPerdilCamarografo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/avatar" />
+
+                <Button
+                    android:id="@+id/btnSolicitar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="#D29405"
+                    android:text="Solicitar"
+                    android:textStyle="bold"
+                    android:textColor="#D29405"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/Nombre_Camarografo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del camarógrafo"
+            android:fontFamily="@font/inter"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camarógrafo de Camvi"
+            android:fontFamily="@font/inter"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_marginStart="40dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="9dp"
+            android:background="#CFCFCF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información del camarógrafo"
+            android:fontFamily="@font/inter"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/escuela"
+                android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:id="@+id/TituloCamarografo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profesion o titulo del camarografo"
+                android:fontFamily="@font/inter"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/correo"
+                android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:id="@+id/CorreoCamarografo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo del camarografo"
+                android:fontFamily="@font/inter"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sobre mi"
+            android:fontFamily="@font/inter"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/SobreMi_Camarografo"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Con más de cinco años de experiencia. Desde muy pequeño me apasiona el arte de la fotografía, por lo que me gradué en la licenciatura de comunicaciones."
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+</FrameLayout>
