@@ -62,6 +62,7 @@ dependencies {
     //    Third party
     implementation "io.coil-kt:coil-compose:1.4.0"
     implementation 'com.github.Gurupreet:FontAwesomeCompose:1.0.0'
+    implementation("org.ktorm:ktorm-core:3.6.0")
 
 
     implementation "androidx.compose.runtime:runtime:1.2.0"

@@ -9,5 +9,4 @@ object Database {
         user = "sa",
         password = "Rical2023*"
     )
-
 }
