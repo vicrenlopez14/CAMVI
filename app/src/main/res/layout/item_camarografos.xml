@@ -35,6 +35,7 @@
                 android:layout_height="37dp"
                 android:gravity="center|center_vertical"
                 android:text="Nombre del camarógrafo"
+                android:fontFamily="@font/inter"
                 android:textColor="#000000"
                 android:textSize="15sp"
                 android:textStyle="normal" />
@@ -61,6 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ver más"
+                android:fontFamily="@font/inter"
                 app:strokeColor="#000000"
                 android:textColor="#000000"/>
 
@@ -70,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Solicitar"
+                android:fontFamily="@font/inter"
                 app:strokeColor="#D29405"
                 android:textColor="#D29405"/>
 

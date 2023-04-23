@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.clientes.fragment_camarografosDisponibles">
+    tools:context=".controller.clientes.fragment_asignarCamarografo">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
@@ -17,10 +17,11 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/inter"
-            android:text="Camarógrafos disponibles"
+            android:text="Asigna un camarógrafo"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -28,32 +29,31 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/inter"
-            android:text="Elije al camarógrafo de tu preferencia."
+            android:text="Camarógrafos disponibles."
             android:textAlignment="textStart"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            android:textColor="#000000"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="12dp"
-            android:background="#F2F4F5" />
+            android:background="#CFD1D3" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="6dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/Lista_Camarografos"
+                android:id="@+id/lista_asignarCamarografo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/item_camarografos">
-            </androidx.recyclerview.widget.RecyclerView>
-
+                android:layout_marginStart="30dp"
+                tools:listitem="@layout/item_camarografos2"></androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
 
     </LinearLayout>
-
 </FrameLayout>
