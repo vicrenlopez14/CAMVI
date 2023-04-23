@@ -1,4 +1,4 @@
-package com.example.camvi.controller.screens.administradores
+package com.example.camvi.controller.global
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
