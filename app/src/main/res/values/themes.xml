@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Camvi" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/Yellow</item>
+        <item name="colorPrimaryVariant">@color/YellowLight</item>
 
-    <style name="Theme.Camvi" parent="android:Theme.Material.Light.NoActionBar" />
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/Background</item>
+
+        <!-- Text and icon colors -->
+        <item name="android:textColorPrimary">@color/GraySecondary</item>
+        <item name="android:textColorSecondary">@color/GrayDisabled</item>
+
+
+    </style>
+
+    <style name="Theme.Camvi" parent="Base.Theme.Camvi" />
 </resources>
