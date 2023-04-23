@@ -12,13 +12,14 @@ import androidx.compose.material3.Button
 import androidx.compose.ui.Modifier
 import com.example.camvi.ui.screens.administradores.AdministradoresNavigationScreen
 import com.example.camvi.ui.theme.CamviTheme
+import com.example.camvi.ui.theme.CustomCamviTheme
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CamviTheme {
+            CustomCamviTheme {
                 Surface {
                     AdministradoresNavigationScreen()
                 }

@@ -16,16 +16,22 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+//    primary = Purple80,
+//    secondary = PurpleGrey80,
+//    tertiary = Pink80
+    primary = Yellow,
+    secondary = YellowLight,
+    background = DarkModeBackground,
+    surface = DarkModeBackground,
+    primaryContainer = DarkModeContainerBackground,
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
+    primary = Yellow,
+    secondary = YellowLight,
+    background = Background,
+    surface = Background,
+    primaryContainer = ContainerBackground,
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
@@ -36,6 +42,26 @@ private val LightColorScheme = lightColorScheme(
     onSurface = Color(0xFF1C1B1F),
     */
 )
+
+fun supportsDynamic(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+
+@Composable
+fun CustomCamviTheme(content: @Composable() () -> Unit) {
+    val inDarkMode: Boolean = isSystemInDarkTheme()
+
+//    val colors = if (supportsDynamic()) {
+//        val context = LocalContext.current
+//        if (inDarkMode) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+//    } else {
+    val colors = if (inDarkMode) DarkColorScheme else LightColorScheme
+//    }
+
+    MaterialTheme(
+        colorScheme = colors,
+        typography = Typography,
+        content = content
+    )
+}
 
 @Composable
 fun CamviTheme(

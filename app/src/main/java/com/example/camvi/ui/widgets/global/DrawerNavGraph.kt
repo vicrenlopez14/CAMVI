@@ -36,5 +36,9 @@ fun DrawerNavGraph(navController: NavHostController) {
         composable(DrawerScreen.GaleriaDeFotos.route) {
             GaleriaDeFotosScreen()
         }
+
+        composable(DrawerScreen.GaleriaDeFotos.route) {
+            GaleriaDeFotosScreen()
+        }
     }
 }
