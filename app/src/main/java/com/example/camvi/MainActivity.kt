@@ -10,25 +10,18 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material3.Button
 import androidx.compose.ui.Modifier
+import com.example.camvi.ui.screens.administradores.AdministradoresNavigationScreen
 import com.example.camvi.ui.theme.CamviTheme
+import com.example.camvi.ui.theme.CustomCamviTheme
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CamviTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Column {
-                        Text("Si funciona")
-                        Button(onClick = { /*TODO*/ }) {
-                            Text("Hola")
-                        }
-                    }
-
+            CustomCamviTheme {
+                Surface {
+                    AdministradoresNavigationScreen()
                 }
             }
         }
