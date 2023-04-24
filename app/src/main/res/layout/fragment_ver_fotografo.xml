@@ -182,7 +182,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/txtContraCamaografo"
         android:layout_width="152dp"
         android:layout_height="24dp"
         android:layout_marginStart="216dp"
@@ -197,7 +197,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView37"
+        android:id="@+id/txtNombreCamarografo"
         android:layout_width="156dp"
         android:layout_height="36dp"
         android:layout_marginStart="216dp"
@@ -212,7 +212,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView41"
+        android:id="@+id/txtUsuarioCamarografo"
         android:layout_width="152dp"
         android:layout_height="24dp"
         android:layout_marginStart="216dp"
@@ -227,7 +227,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/txtDUIcamarografo"
         android:layout_width="152dp"
         android:layout_height="24dp"
         android:layout_marginStart="216dp"
@@ -242,7 +242,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView40"
+        android:id="@+id/txtCorreoCamarografo"
         android:layout_width="152dp"
         android:layout_height="24dp"
         android:layout_marginStart="216dp"
@@ -257,7 +257,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView38"
+        android:id="@+id/txtContactoCamarografo"
         android:layout_width="152dp"
         android:layout_height="24dp"
         android:layout_marginStart="216dp"
