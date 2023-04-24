@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.clientes.fragment_asignarCamarografo">
+    tools:context=".controller.administradores.fragment_asignarCamarografoAdmin">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                tools:listitem="@layout/item_camarografos2">
+                tools:listitem="@layout/item_asigna_camarografos_admin">
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
