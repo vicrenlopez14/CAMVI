@@ -1,30 +1,20 @@
 package com.example.camvi
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.material.Surface
-import androidx.navigation.compose.rememberNavController
-import com.example.camvi.controller.global.Fragment_Login
-import com.example.camvi.databinding.FragmentPrincipalBinding
-import com.example.camvi.ui.screens.administradores.AdministradoresNavigationScreen
-import com.example.camvi.ui.theme.CustomCamviTheme
-import com.example.camvi.ui.widgets.global.GlobalNavGraph
-import com.example.camvi.utils.FragmentScreen
+import android.widget.Button
+import androidx.navigation.Navigation
+import com.example.camvi.ui.widgets.global.CamviScreen
 
+lateinit var loginButton: Button
+lateinit var registerButton: Button
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            CustomCamviTheme {
-                Surface {
-                    val navController = rememberNavController()
+        setContentView(R.layout.activity_main)
 
-                    GlobalNavGraph(navController)
-                }
-            }
-        }
+        loginButton = findViewById(R.id.btnRegistrarse)
+        
     }
 }

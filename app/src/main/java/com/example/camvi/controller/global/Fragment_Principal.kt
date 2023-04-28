@@ -35,18 +35,7 @@ class Fragment_Principal : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        loginButton = view?.findViewById(R.id.btnIniciarSesion)!!
-        registerButton = view?.findViewById(R.id.button)!!
 
-        val navController = findNavController(requireView())
-
-        loginButton.setOnClickListener {
-            navController.navigate(CamviScreen.InicioDeSesion.route)
-        }
-
-        registerButton.setOnClickListener {
-            navController.navigate(CamviScreen.Registro.route)
-        }
     }
 
     override fun onCreateView(
