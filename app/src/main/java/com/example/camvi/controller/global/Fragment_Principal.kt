@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation.findNavController
 import com.example.camvi.R
+import com.example.camvi.ui.widgets.global.CamviScreen
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +20,9 @@ private const val ARG_PARAM2 = "param2"
  * Use the [Fragment_Principal.newInstance] factory method to
  * create an instance of this fragment.
  */
+lateinit var loginButton: Button
+lateinit var registerButton: Button
+
 class Fragment_Principal : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -27,6 +33,19 @@ class Fragment_Principal : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+
+        loginButton = view?.findViewById(R.id.btnIniciarSesion)!!
+        registerButton = view?.findViewById(R.id.button)!!
+
+        val navController = findNavController(requireView())
+
+        loginButton.setOnClickListener {
+            navController.navigate(CamviScreen.InicioDeSesion.route)
+        }
+
+        registerButton.setOnClickListener {
+            navController.navigate(CamviScreen.Registro.route)
         }
     }
 

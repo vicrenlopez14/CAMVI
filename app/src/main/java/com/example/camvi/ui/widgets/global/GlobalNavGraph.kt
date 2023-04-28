@@ -33,11 +33,15 @@ import com.example.camvi.ui.screens.administradores.*
 import com.example.camvi.utils.FragmentScreen
 
 @Composable
-fun DrawerNavGraph(navController: NavHostController) {
+fun GlobalNavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = CamviScreen.Bienvenida.route) {
         composable(CamviScreen.Bienvenida.route) {
             FragmentScreen { context, parent ->
-                FragmentPrincipalBinding.inflate(LayoutInflater.from(context), parent, true).root
+                FragmentPrincipalBinding.inflate(
+                    LayoutInflater.from(context),
+                    parent,
+                    true
+                ).root
             }
         }
 
@@ -57,6 +61,15 @@ fun DrawerNavGraph(navController: NavHostController) {
             }
         }
 
+        composable(CamviScreen.CerrarSesion.route) {
+            FragmentScreen { context, parent ->
+                FragmentPrincipalBinding.inflate(
+                    LayoutInflater.from(context),
+                    parent,
+                    true
+                ).root
+            }
+        }
 
         composable(CamviScreen.Camarografos.route) {
             CamarografosScreen()
@@ -80,12 +93,6 @@ fun DrawerNavGraph(navController: NavHostController) {
 
         composable(CamviScreen.GaleriaDeFotos.route) {
             GaleriaDeFotosScreen()
-        }
-
-        composable(CamviScreen.CerrarSesion.route) {
-            FragmentScreen { context, parent ->
-                FragmentLoginBinding.inflate(LayoutInflater.from(context), parent, true).root
-            }
         }
 
         composable(CamviScreen.OlvideMiContrasena.route) {

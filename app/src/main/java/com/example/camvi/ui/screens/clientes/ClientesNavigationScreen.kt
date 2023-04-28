@@ -1,4 +1,4 @@
-package com.example.camvi.ui.screens.administradores
+package com.example.camvi.ui.screens.clientes
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,17 +25,16 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AdministradoresNavigationScreen() {
-
+fun CamarografosNavigationScreen() {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val coroutineScope = rememberCoroutineScope()
-    val navControllerAdministradores = rememberNavController()
+    val navControllerClientes = rememberNavController()
 
     ModalNavigationDrawer(
         drawerState = drawerState,
         drawerContent = {
             ModalDrawerSheet {
-                DrawerContent(navControllerAdministradores, drawerState)
+                DrawerContent(navControllerClientes, drawerState)
             }
         },
     ) {
@@ -64,7 +63,7 @@ fun AdministradoresNavigationScreen() {
                     .padding(it)
                     .fillMaxSize()
             ) {
-                AdministradoresNavGraph(navController = navControllerAdministradores)
+                AdministradoresNavGraph(navController = navControllerClientes)
             }
         }
     }
