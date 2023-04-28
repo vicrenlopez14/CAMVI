@@ -1,12 +1,7 @@
 package com.example.camvi.model.globales
 
-import org.ktorm.database.Database
+import java.sql.DriverManager
 
-object Database {
-    val database = Database.connect(
-        "jdbc:sqlserver://localhost:1433;databaseName=CamviDatabase",
-        driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver",
-        user = "sa",
-        password = "Rical2023*"
-    )
-}
+val DatabaseConnection =
+    DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=Camvi;user=sa;password=Rical2023*")
+

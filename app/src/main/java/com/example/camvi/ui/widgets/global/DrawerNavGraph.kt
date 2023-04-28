@@ -1,10 +1,16 @@
 package com.example.camvi.ui.widgets.global
 
+import android.view.LayoutInflater
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.camvi.controller.global.Fragment_Login
+import com.example.camvi.databinding.FragmentLoginBinding
 import com.example.camvi.ui.screens.administradores.*
+import com.example.camvi.utils.FragmentScreen
 
 @Composable
 fun DrawerNavGraph(navController: NavHostController) {
@@ -40,5 +46,12 @@ fun DrawerNavGraph(navController: NavHostController) {
         composable(DrawerScreen.GaleriaDeFotos.route) {
             GaleriaDeFotosScreen()
         }
+
+        composable(DrawerScreen.CerrarSesion.route) {
+            FragmentScreen { context, parent ->
+                FragmentLoginBinding.inflate(LayoutInflater.from(context), parent, true).root
+            }
+        }
+
     }
 }

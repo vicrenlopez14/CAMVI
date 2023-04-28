@@ -43,7 +43,6 @@ fun AdministradoresNavigationScreen() {
             TopAppBar(title = { Text(text = "Camvi") }, navigationIcon = {
 
                 IconButton(onClick = {
-
                     if (drawerState.isClosed) {
                         coroutineScope.launch {
                             drawerState.open()
