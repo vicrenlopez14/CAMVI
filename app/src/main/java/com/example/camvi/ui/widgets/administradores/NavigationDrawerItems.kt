@@ -1,14 +1,11 @@
 package com.example.camvi.ui.widgets.administradores
 
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Place
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -21,7 +18,7 @@ import androidx.navigation.NavDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navOptions
-import com.example.camvi.ui.widgets.global.DrawerScreen
+import com.example.camvi.ui.widgets.global.CamviScreen
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -32,12 +29,12 @@ fun NavigationDrawerItems(navController: NavHostController, drawerState: DrawerS
     val destination = currentBackStackEntryAsState?.destination
 
     val screens = listOf(
-        DrawerScreen.Inicio,
-        DrawerScreen.Camarografos,
-        DrawerScreen.Sesiones,
-        DrawerScreen.Confirmaciones,
-        DrawerScreen.Calificaciones,
-        DrawerScreen.GaleriaDeFotos,
+        CamviScreen.Inicio,
+        CamviScreen.Camarografos,
+        CamviScreen.Sesiones,
+        CamviScreen.Confirmaciones,
+        CamviScreen.Calificaciones,
+        CamviScreen.GaleriaDeFotos,
     )
 
     screens.forEach { screen ->
@@ -53,7 +50,7 @@ fun NavigationDrawerItems(navController: NavHostController, drawerState: DrawerS
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddItem(
-    screen: DrawerScreen,
+    screen: CamviScreen,
     currentDestination: NavDestination?,
     navController: NavController,
     drawerState: DrawerState
@@ -61,8 +58,8 @@ fun AddItem(
     val scope = rememberCoroutineScope()
 
     NavigationDrawerItem(
-        icon = { Icon(screen.icon, screen.title) },
-        label = { Text(text = screen.title) },
+        icon = { Icon(screen.icon ?: Icons.Filled.Home, screen.title) },
+        label = { Text(text = screen.title ?: "Pantalla") },
         selected = currentDestination?.route == "SettingPage",
         onClick = {
             navController.navigate(screen.route, navOptions {
