@@ -24,9 +24,6 @@ private const val ARG_PARAM2 = "param2"
  * Use the [Fragment_Login.newInstance] factory method to
  * create an instance of this fragment.
  */
-lateinit var txtEmail: EditText
-lateinit var txtPassword: EditText
-lateinit var btnLogin: Button
 
 
 class Fragment_Login : Fragment() {
@@ -41,22 +38,7 @@ class Fragment_Login : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        txtEmail = view?.findViewById(R.id.txtEmail)!!
-        txtPassword = view?.findViewById(R.id.txtPassword)!!
-        btnLogin = view?.findViewById(R.id.btnIniciarSesionIni)!!
 
-        btnLogin.setOnClickListener {
-            val email = txtEmail.text.toString()
-            val password = txtPassword.text.toString()
-            if (email.isEmpty() || password.isEmpty()) {
-                txtEmail.error = "Por favor ingrese su correo"
-                txtPassword.error = "Por favor ingrese su contraseña"
-            } else {
-                lifecycleScope.launch {
-                    val tipoUsuario = CamviFunctions.fnIniciarSesion(email, password)
-                }
-            }
-        }
     }
 
     override fun onCreateView(

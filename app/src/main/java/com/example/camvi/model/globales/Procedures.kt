@@ -1,32 +1,43 @@
 package com.example.camvi.model.globales
 
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import java.sql.Types
+import java.sql.SQLException
 
 class CamviProcedures {
     companion object {
-        suspend fun spRegistrarCliente(
+        private var connectSql = ConnectSql()
+
+        fun spRegistrarCliente(
             nombre: String,
             correo: String,
             pass: String,
             contacto: String,
             dui: String
-        ): Int = withContext(Dispatchers.IO) {
-            var result = 0
-            val callableStatement =
-                DatabaseConnection.prepareCall("{? = call spRegistrarCliente(?, ?, ?, ?, ?)}")
-            callableStatement.registerOutParameter(1, Types.INTEGER)
-            callableStatement.setString(2, nombre)
-            callableStatement.setString(3, correo)
-            callableStatement.setString(4, pass)
-            callableStatement.setString(5, contacto)
-            callableStatement.setString(6, dui)
-            callableStatement.execute()
-            result = callableStatement.getInt(1)
-            callableStatement.close()
-            return@withContext result
+        ): Int {
+            var exitoso: Int = 0
+
+            try {
+                val statement =
+                    connectSql.dbConn()?.prepareCall("{call spRegistrarCliente ?, ?, ?, ?, ?}")
+                statement?.setString(1, nombre)
+                statement?.setString(2, correo)
+                statement?.setString(3, pass)
+                statement?.setString(4, contacto)
+                statement?.setString(5, dui)
+
+                val resultSet =
+                    statement?.executeQuery()
+
+                while (resultSet?.next() == true) {
+                    exitoso = resultSet.getInt("Result")
+                }
+            } catch (ex: SQLException) {
+                exitoso = 0
+            } catch (ex: Exception) {
+                print(ex.message)
+            }
+
+            return exitoso
         }
 
     }

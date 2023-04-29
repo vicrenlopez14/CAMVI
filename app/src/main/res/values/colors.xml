@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Yellow">#FFE9C94C</color>
     <color name="YellowLight">#FFF3DE8A</color>
+
     <color name="Background">#FFF5F5F5</color>
     <color name="GraySecondary">#FFE0E0E0</color>
     <color name="GrayDisabled">#FFB3B3B3</color>

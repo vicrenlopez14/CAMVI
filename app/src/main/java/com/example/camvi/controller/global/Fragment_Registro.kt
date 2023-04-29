@@ -26,12 +26,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 
-lateinit var nombre: EditText
-lateinit var contacto: EditText
-lateinit var dui: EditText
-lateinit var correo: EditText
-lateinit var contrasena: EditText
-lateinit var btnRegistrar: Button
+
 
 class Fragment_Registro : Fragment() {
     // TODO: Rename and change types of parameters
@@ -45,58 +40,7 @@ class Fragment_Registro : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        nombre = view?.findViewById(R.id.txtNombre)!!
-        contacto = view?.findViewById(R.id.txtContacto)!!
-        dui = view?.findViewById(R.id.txtDUI)!!
-        correo = view?.findViewById(R.id.txtEmailCreate)!!
-        contrasena = view?.findViewById(R.id.txtPasswordCreate)!!
-        btnRegistrar = view?.findViewById(R.id.btnRegistrarse)!!
 
-
-        btnRegistrar.setOnClickListener {
-            val nombre = nombre.text.toString()
-            val contacto = contacto.text.toString()
-            val dui = dui.text.toString()
-            val correo = correo.text.toString()
-            val contrasena = contrasena.text.toString()
-
-            if (nombre.isEmpty() || contacto.isEmpty() || dui.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
-                Toast.makeText(
-                    requireContext(),
-                    "Por favor, rellene todos los campos",
-                    Toast.LENGTH_SHORT
-                )
-                    .show()
-            } else {
-                lifecycleScope.launch {
-                    val result = CamviProcedures.spRegistrarCliente(
-                        nombre,
-                        correo,
-                        contrasena,
-                        contacto,
-                        dui
-                    )
-
-                    if (result == 1) {
-                        Toast.makeText(
-                            requireContext(),
-                            "Registro exitoso",
-                            Toast.LENGTH_SHORT
-                        )
-                            .show()
-                    } else {
-                        Toast.makeText(
-                            requireContext(),
-                            "Registro fallido",
-                            Toast.LENGTH_SHORT
-                        )
-                            .show()
-                    }
-                }
-
-
-            }
-        }
     }
 
     override fun onCreateView(

@@ -1,27 +1,38 @@
 package com.example.camvi.model.globales
 
+import android.widget.ArrayAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.sql.SQLException
 import java.sql.Types
 
 class CamviFunctions {
     companion object {
-        suspend fun fnIniciarSesion(correo: String, pass: String): Int? =
-            withContext(Dispatchers.IO) {
-                var tipoUsuario: Int? = null
-                val callableStatement =
-                    DatabaseConnection.prepareCall("{? = call fnIniciarSesion(?, ?)}")
-                callableStatement.registerOutParameter(1, Types.INTEGER)
-                callableStatement.setString(2, correo)
-                callableStatement.setString(3, pass)
-                callableStatement.execute()
-                val result = callableStatement.getObject(1)
-                if (result != null) {
-                    tipoUsuario = result as Int
+        private var connectSql = ConnectSql()
+
+        fun fnIniciarSesion(correo: String, pass: String): Int {
+            var tipoUsuario: Int = 0
+
+            try {
+                val statement =
+                    connectSql.dbConn()
+                        ?.prepareStatement("SELECT dbo.fnIniciarSesion(?, ?) AS TipoUsuario")
+                statement?.setString(1, correo)
+                statement?.setString(2, pass)
+
+                val resultSet =
+                    statement?.executeQuery()
+
+                while (resultSet?.next() == true) {
+                    tipoUsuario = resultSet.getInt("TipoUsuario")
                 }
-                callableStatement.close()
-                DatabaseConnection.close()
-                return@withContext tipoUsuario
+            } catch (ex: SQLException) {
+                tipoUsuario = 0
+            } catch (ex: Exception) {
+                print(ex.message)
             }
+
+            return tipoUsuario
+        }
     }
 }

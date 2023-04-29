@@ -15,6 +15,17 @@
         android:theme="@style/Theme.Camvi"
         tools:targetApi="31">
         <activity
+            android:name=".controller.global.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".controller.global.RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".controller.administradores.AdministradoresMainScreen"
+            android:exported="false"
+            android:label="@string/title_activity_administradores_main_screen"
+            android:theme="@style/Theme.Camvi.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
