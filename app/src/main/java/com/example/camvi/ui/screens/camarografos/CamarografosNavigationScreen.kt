@@ -19,7 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.example.camvi.ui.widgets.administradores.DrawerContent
+import com.example.camvi.ui.widgets.administradores.DrawerContenido
 import com.example.camvi.ui.widgets.global.AdministradoresNavGraph
 import kotlinx.coroutines.launch
 
@@ -35,7 +35,7 @@ fun CamarografosNavigationScreen() {
         drawerState = drawerState,
         drawerContent = {
             ModalDrawerSheet {
-                DrawerContent(navControllerCamarografos, drawerState)
+                DrawerContenido(navControllerCamarografos, drawerState)
             }
         },
     ) {

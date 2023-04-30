@@ -36,13 +36,7 @@ import com.example.camvi.utils.FragmentScreen
 fun AdministradoresNavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = CamviScreen.Bienvenida.route) {
         composable(CamviScreen.Bienvenida.route) {
-            FragmentScreen { context, parent ->
-                FragmentPrincipalBinding.inflate(
-                    LayoutInflater.from(context),
-                    parent,
-                    true
-                ).root
-            }
+            HomeScreen()
         }
 
         composable(CamviScreen.InicioDeSesion.route) {

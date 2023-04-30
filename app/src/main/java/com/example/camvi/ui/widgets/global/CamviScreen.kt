@@ -20,7 +20,7 @@ sealed class CamviScreen(
     object Registro : CamviScreen("Registro", "Registro", Icons.Filled.Home)
 
     // Screens for Inicio, Camarógrafos, Sesiones, Confirmaciones, Calificaciones, Galería de fotos and Cerrar Sesión
-    object Inicio : CamviScreen("Inicio", "Inicio", Icons.Filled.Home)
+    object InicioAdministradores : CamviScreen("Inicio", "Inicio", Icons.Filled.Home)
     object Camarografos : CamviScreen("Camarografos", "Camarografos", Icons.Filled.PhotoCamera)
     object Sesiones : CamviScreen("Sesiones", "Sesiones", Icons.Filled.Camera)
     object Confirmaciones : CamviScreen("Confirmaciones", "Confirmaciones", Icons.Filled.Star)

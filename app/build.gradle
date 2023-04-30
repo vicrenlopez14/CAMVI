@@ -47,6 +47,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
 }
 
 dependencies {
@@ -61,12 +66,15 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation files('libs\\jtds-1.3.1.jar')
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation platform('androidx.compose:compose-bom:2022.10.00')
+    implementation 'androidx.compose.ui:ui-graphics'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation "androidx.compose.ui:ui-viewbinding:1.2.1"
     implementation "androidx.fragment:fragment:1.2.5"
-
+    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
 
 
 //    Compose

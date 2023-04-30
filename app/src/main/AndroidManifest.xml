@@ -15,6 +15,11 @@
         android:theme="@style/Theme.Camvi"
         tools:targetApi="31">
         <activity
+            android:name=".AdministradoresActivity"
+            android:exported="false"
+            android:label="@string/title_activity_administradores"
+            android:theme="@style/Theme.Camvi" />
+        <activity
             android:name=".controller.global.LoginActivity"
             android:exported="false" />
         <activity

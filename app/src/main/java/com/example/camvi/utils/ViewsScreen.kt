@@ -25,5 +25,3 @@ fun FragmentScreen(
         },
     )
 }
-
-// FragmentLoginBinding.inflate(LayoutInflater.from(context), this, true).root

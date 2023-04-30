@@ -29,7 +29,7 @@ fun NavigationDrawerItems(navController: NavHostController, drawerState: DrawerS
     val destination = currentBackStackEntryAsState?.destination
 
     val screens = listOf(
-        CamviScreen.Inicio,
+        CamviScreen.InicioAdministradores,
         CamviScreen.Camarografos,
         CamviScreen.Sesiones,
         CamviScreen.Confirmaciones,

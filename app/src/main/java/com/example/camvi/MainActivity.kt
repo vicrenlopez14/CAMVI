@@ -1,34 +1,31 @@
 package com.example.camvi
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import androidx.navigation.Navigation
-import com.example.camvi.controller.administradores.AdministradoresMainScreen
-import com.example.camvi.controller.global.LoginActivity
-import com.example.camvi.controller.global.RegistroActivity
-import com.example.camvi.ui.widgets.global.CamviScreen
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.example.camvi.ui.theme.CustomCamviTheme
+import com.example.camvi.ui.widgets.global.GlobalNavGraph
 
-lateinit var loginButton: Button
-lateinit var registerButton: Button
-
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        loginButton = findViewById(R.id.btnIniciarSesion)
-        registerButton = findViewById(R.id.btnRegistrarse)
-
-        loginButton.setOnClickListener {
-            val intent: Intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        setContent {
+            CamviApp()
         }
+    }
+}
 
-        registerButton.setOnClickListener {
-            val intent: Intent = Intent(this, RegistroActivity::class.java)
-            startActivity(intent)
+@Composable
+fun CamviApp() {
+    CustomCamviTheme {
+        Surface {
+            val navController = rememberNavController()
+
+            GlobalNavGraph(navController = navController)
         }
     }
 }
